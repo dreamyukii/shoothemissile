@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using System.IO;
 
 public class ScoreUi : MonoBehaviour
 {
@@ -10,8 +11,9 @@ public class ScoreUi : MonoBehaviour
     
     void Start()
     {
-        
-        var scores = scoreManager.GetHighScores().ToArray();
+         name = SystemInfo.operatingSystem;
+         scoreManager.AddScore(new Score(name,HitungSkor.scoreValue));
+         var scores = scoreManager.GetHighScores().ToArray();
         for (int i = 0; i < scores.Length; i++)
         {
             var row = Instantiate(rowUi, transform).GetComponent<RowUi>();

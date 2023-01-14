@@ -19,7 +19,7 @@ public class ManagerSpawn : MonoBehaviour
         if (timer > timeBetweenSpawns)
         {
             timer = 0;
-            int randNum = Random.Range(0, 1);
+            int randNum = Random.Range(0, 3);
             Instantiate(spawnObject, spawnPoints[randNum].transform.position, Quaternion.identity);
         }
     }

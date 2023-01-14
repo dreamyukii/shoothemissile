@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330010709461541355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.9838, y: -1.9688, z: 0}
-  m_LocalScale: {x: 0.27960303, y: 0.2898809, z: 1}
+  m_LocalPosition: {x: -3.5047, y: -1.4966, z: 0}
+  m_LocalScale: {x: 0.1389502, y: 0.13976993, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   target: Enemy
+  peluru: {fileID: 0}
 --- !u!114 &6158142253790413890
 MonoBehaviour:
   m_ObjectHideFlags: 0

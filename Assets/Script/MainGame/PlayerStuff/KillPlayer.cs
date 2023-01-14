@@ -8,7 +8,7 @@ public class KillPlayer : MonoBehaviour
 {
     private GameObject player;
     public GameObject gameOverPanel;
-    public ScoreManager ScoreManager;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -20,19 +20,19 @@ public class KillPlayer : MonoBehaviour
         {
             gameOverPanel.SetActive(true);
             Time.timeScale = 0f;
-            ScoreManager.FinalScore("Cope",ScoreState.instance._score);
+            
         }
     }
     
-
-    public void Awake()
-    {
-        ScoreManager = GetComponent<ScoreManager>();
-    }
-
     public void Restart()
     {
         SceneManager.LoadScene(1);
         Time.timeScale = 1f;
+        HitungSkor.scoreValue = 0;
+    }
+
+    public void Exit()
+    {
+        Application.Quit();
     }
 }

@@ -11,6 +11,10 @@ public class MenuUtama : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
     }
 
+    public void Pengaturan()
+    {
+        
+    }
     public void ExitGame()
     {
         Application.Quit();

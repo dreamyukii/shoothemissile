@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using System.IO;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class ScoreManager : MonoBehaviour
     {
         sd.scores.Add(score);
     }
-
+    
     private void OnDestroy()
     {
         SaveScore();
@@ -31,16 +32,18 @@ public class ScoreManager : MonoBehaviour
     public void SaveScore()
     {
         var json = JsonUtility.ToJson(sd);
-        Debug.Log(json);
         PlayerPrefs.SetString("scores", json);
+        File.WriteAllText(Application.persistentDataPath + "/Skor.json", json);
     }
-
-    public void FinalScore(string name,float score)
+    
+    /*
+     public void FinalScore(string name,float score)
     {
         var temp = sd.scores.FindIndex(x => x.name == name);
         sd.scores[temp].score = score;
 
     }
+    */
 }
 
 
