@@ -149,7 +149,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   target: Enemy
-  peluru: {fileID: 0}
+  sourceAudio: {fileID: 0}
+  killEnemy: {fileID: 0}
 --- !u!114 &6158142253790413890
 MonoBehaviour:
   m_ObjectHideFlags: 0

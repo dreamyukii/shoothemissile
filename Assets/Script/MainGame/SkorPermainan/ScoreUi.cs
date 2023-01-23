@@ -11,9 +11,9 @@ public class ScoreUi : MonoBehaviour
     
     void Start()
     {
-         name = SystemInfo.operatingSystem;
-         scoreManager.AddScore(new Score(name,HitungSkor.scoreValue));
-         var scores = scoreManager.GetHighScores().ToArray();
+        name= PlayerPrefs.GetString("player_name");
+        scoreManager.AddScore(new Score(name,HitungSkor.scoreValue));
+        var scores = scoreManager.GetHighScores().ToArray();
         for (int i = 0; i < scores.Length; i++)
         {
             var row = Instantiate(rowUi, transform).GetComponent<RowUi>();

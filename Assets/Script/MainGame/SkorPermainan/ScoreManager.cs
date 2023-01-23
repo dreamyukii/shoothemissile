@@ -35,15 +35,6 @@ public class ScoreManager : MonoBehaviour
         PlayerPrefs.SetString("scores", json);
         File.WriteAllText(Application.persistentDataPath + "/Skor.json", json);
     }
-    
-    /*
-     public void FinalScore(string name,float score)
-    {
-        var temp = sd.scores.FindIndex(x => x.name == name);
-        sd.scores[temp].score = score;
-
-    }
-    */
 }
 
 

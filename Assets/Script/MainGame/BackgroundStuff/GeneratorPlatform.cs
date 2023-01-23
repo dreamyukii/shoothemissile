@@ -7,14 +7,11 @@ public class GeneratorPlatform : MonoBehaviour
     public GameObject platformIni;
     public Transform poinGenerasi;
     public float jarakAntara;
-
     private float platformLebar;
     void Start()
     {
         platformLebar = platformIni.GetComponent<BoxCollider2D>().size.x;
     }
-
-    
     void Update()
     {
         if (transform.position.x < poinGenerasi.position.x)

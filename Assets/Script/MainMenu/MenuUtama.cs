@@ -8,12 +8,19 @@ public class MenuUtama : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(1);
+        HitungSkor.scoreValue = 0;
     }
-
+    
     public void Pengaturan()
     {
-        
+        SceneManager.LoadScene(2);
+    }
+
+    public void aboutMenu()
+    {
+        SceneManager.LoadScene(3);
     }
     public void ExitGame()
     {
