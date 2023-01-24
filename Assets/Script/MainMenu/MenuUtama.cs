@@ -8,6 +8,7 @@ public class MenuUtama : MonoBehaviour
 {
     public void PlayGame()
     {
+        PlayerController.GameIsOver = false;
         Time.timeScale = 1f;
         SceneManager.LoadScene(1);
         HitungSkor.scoreValue = 0;

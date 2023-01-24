@@ -61,11 +61,9 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0f;
         }
     }
-
-
-
     public void Restart()
     {
+        GameIsOver = false;
         SceneManager.LoadScene(1);
         Time.timeScale = 1f;
         HitungSkor.scoreValue = 0;
