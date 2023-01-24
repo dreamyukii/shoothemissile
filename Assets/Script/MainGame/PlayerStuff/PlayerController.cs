@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigidBodyPlayer;
     public GameObject gameOverPanel;
     public static bool GameIsPaused = false;
+    public static bool GameIsOver = false;
     public GameObject pauseMenu;
     public AudioSource sourceAudio;
     public AudioClip shootSound;
@@ -36,7 +37,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         rigidBodyPlayer.velocity = new Vector2(moveSpeed, rigidBodyPlayer.velocity.y);
-        if (!GameIsPaused)
+        if (!GameIsPaused && !GameIsOver)
         {
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
             {
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
+            GameIsOver = true;
             sourceAudio.PlayOneShot(deathSound);
             gameOverPanel.SetActive(true);
             Time.timeScale = 0f;
